@@ -1,9 +1,9 @@
 name: Sync dev to main
 on:
-  push:
-    branches:
-      - dev
-      - develop
+#  push:
+#    branches:
+#      - dev
+#      - develop
   workflow_dispatch:
     
 permissions:
