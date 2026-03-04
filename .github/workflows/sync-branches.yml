@@ -1,0 +1,22 @@
+name: Sync dev to main
+on:
+  push:
+    branches:
+      - dev
+      - develop
+  workflow_dispatch:
+    
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          force: true
